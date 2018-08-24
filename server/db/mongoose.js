@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-const connectionString = process.env.CONNECTION_STRING || 'mongodb://localhost:27017/test-app'
+let connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/test-app'
 mongoose.connect(connectionString).then(()=>{
-  console.log('connected');
+  console.log(`connected to ${connectionString}`);
 }).catch((err)=>console.log(`error connecting: ${err}`));
 
 module.exports = {
