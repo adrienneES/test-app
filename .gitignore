@@ -1,5 +1,5 @@
-# config files
-/server/db/config*
+# config file only for dev & test
+/server/db/config.json
 # Logs
 logs
 *.log
