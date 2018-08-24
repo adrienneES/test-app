@@ -1,9 +1,5 @@
 const {mongoose} = require('../db/mongoose');
 const Question = mongoose.model('Question',{
-  topicId: {
-    type: mongoose.SchemaTypes.ObjectId,
-    required:true
-  },
   question: {
     type: String, 
     required: true
@@ -11,6 +7,10 @@ const Question = mongoose.model('Question',{
   answer: {
     type: String, 
     required: true
+  },
+  topicId: {
+    type: mongoose.SchemaTypes.ObjectId,
+    required:true
   },
 });
 

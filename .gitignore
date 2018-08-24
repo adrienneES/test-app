@@ -1,3 +1,5 @@
+# config files
+/server/db/config*
 # Logs
 logs
 *.log
