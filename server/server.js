@@ -31,9 +31,11 @@ app.get('/topics/:id', async (req, res)=>{
     }
 })
 app.post('/topics', async (req, res) => {
-  const topic = new Topic(_.pick(req.body, ['name']))
+  let body = _.pick(req.body, ['name']);
+  const topic = new Topic(body);
   try {
     const result = await topic.save();
+    console.log('added', result);
     res.send({data:'data', result});
   } catch (error) {
     res.status(400).send({error});
