@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 7000;
 const express = require('express');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
@@ -6,7 +7,6 @@ const {mongoose} = require('./db/mongoose');
 const {Question} = require('./models/question');
 const {User} = require('./models/question');
 const {Topic} = require('./models/topics');
-const PORT = process.env.PORT || 7000;
 
 var app = express()
 
