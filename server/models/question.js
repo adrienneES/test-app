@@ -8,9 +8,9 @@ const Question = mongoose.model('Question',{
     type: String, 
     required: true
   },
-  topicId: {
-    type: mongoose.SchemaTypes.ObjectId,
-    required:true
+  topic: {
+    type: String, 
+    required: true
   },
 });
 

@@ -13,7 +13,7 @@ const topicIdOne = new ObjectID;
 const topicIdTwo = new ObjectID;
 const topicIdThree = new ObjectID;
 const topics = [ {
-  _id: topicIdOne, name:'C#'
+  _id: topicIdOne, name:'CSharp'
 }, {
   _id: topicIdTwo, name: 'JavaScript'
 }, {
@@ -27,17 +27,22 @@ const populateQuestions = (done)=>{
   }).then(()=>done())
   .catch((err)=>{console.log('saw error', err);done(err)});
 }
-
+const questionId1 = new ObjectID();
+const questionId2 = new ObjectID();
+const questionId3 = new ObjectID();
 const questions = [{
-  topicId: topicIdOne,
+  _id: questionId1,
+  topic: topics[0]._id,
   question: 'what is runtime polymorphism',
   answer: 'late binding and overriding of methods'
 }, {
-  topicId: topicIdOne,
+  _id: questionId2,
+  topic: topics[0]._id,
   question: 'abstract vs virtual decorator',
   answer: 'abstract - must override, virtual may override'
 }, {
-  topicId: topicIdThree,
+  _id: questionId3,
+  topic: topics[1]._id,
   question: 'what is node',
   answer: 'javascript runtime'
 }  
